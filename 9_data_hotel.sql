@@ -1,8 +1,3 @@
---ТУРЦИЯ
---Анталия
---Antalya Adonis
---номер СТАНДАРТ, тип отдыха СПОКОЙНЫЙ/МОЛОДЕЖНЫЙ
-	--питание ALL
 INSERT INTO hotels (hotel_name, place_id, hotel_category_id, food_id, room_type_id, accomodation_id, location_id, recreation_id, price) 
 	VALUES ("Antalya Adonis", 1, 5, 8, 18, 1, 3, 5, 433.86);
 INSERT INTO hotels (hotel_name, place_id, hotel_category_id, food_id, room_type_id, accomodation_id, location_id, recreation_id, price) 
@@ -17,7 +12,6 @@ INSERT INTO hotels (hotel_name, place_id, hotel_category_id, food_id, room_type_
 	VALUES ("Antalya Adonis", 1, 5, 8, 18, 13, 3, 5, 433.86);
 INSERT INTO hotels (hotel_name, place_id, hotel_category_id, food_id, room_type_id, accomodation_id, location_id, recreation_id, price) 
 	VALUES ("Antalya Adonis", 1, 5, 8, 18, 14, 3, 5, 433.86);
-	--питание HB
 INSERT INTO hotels (hotel_name, place_id, hotel_category_id, food_id, room_type_id, accomodation_id, location_id, recreation_id, price) 
 	VALUES ("Antalya Adonis", 1, 5, 3, 18, 1, 3, 5, 403.75);
 INSERT INTO hotels (hotel_name, place_id, hotel_category_id, food_id, room_type_id, accomodation_id, location_id, recreation_id, price) 
@@ -32,7 +26,6 @@ INSERT INTO hotels (hotel_name, place_id, hotel_category_id, food_id, room_type_
 	VALUES ("Antalya Adonis", 1, 5, 3, 18, 13, 3, 5, 403.75);
 INSERT INTO hotels (hotel_name, place_id, hotel_category_id, food_id, room_type_id, accomodation_id, location_id, recreation_id, price) 
 	VALUES ("Antalya Adonis", 1, 5, 3, 18, 14, 3, 5, 403.75)
-	--питание BB
 INSERT INTO hotels (hotel_name, place_id, hotel_category_id, food_id, room_type_id, accomodation_id, location_id, recreation_id, price) 
 	VALUES ("Antalya Adonis", 1, 5, 2, 18, 1, 3, 5, 379.69);;
 INSERT INTO hotels (hotel_name, place_id, hotel_category_id, food_id, room_type_id, accomodation_id, location_id, recreation_id, price) 
@@ -47,9 +40,6 @@ INSERT INTO hotels (hotel_name, place_id, hotel_category_id, food_id, room_type_
 	VALUES ("Antalya Adonis", 1, 5, 2, 18, 13, 3, 5, 379.69);
 INSERT INTO hotels (hotel_name, place_id, hotel_category_id, food_id, room_type_id, accomodation_id, location_id, recreation_id, price) 
 	VALUES ("Antalya Adonis", 1, 5, 2, 18, 14, 3, 5, 379.69);
-
---номер СТУДИЯ, тип отдыха СПОКОЙНЫЙ/МОЛОДЕЖНЫЙ
-	--питание ALL
 INSERT INTO hotels (hotel_name, place_id, hotel_category_id, food_id, room_type_id, accomodation_id, location_id, recreation_id, price)
 	VALUES ("Antalya Adonis", 1, 5, 8, 19, 1, 3, 5, 515.21);
 INSERT INTO hotels (hotel_name, place_id, hotel_category_id, food_id, room_type_id, accomodation_id, location_id, recreation_id, price)
@@ -64,7 +54,6 @@ INSERT INTO hotels (hotel_name, place_id, hotel_category_id, food_id, room_type_
 	VALUES ("Antalya Adonis", 1, 5, 8, 19, 13, 3, 5, 515.21);
 INSERT INTO hotels (hotel_name, place_id, hotel_category_id, food_id, room_type_id, accomodation_id, location_id, recreation_id, price)
 	VALUES ("Antalya Adonis", 1, 5, 8, 19, 14, 3, 5, 515.21);
-	--питание HB
 INSERT INTO hotels (hotel_name, place_id, hotel_category_id, food_id, room_type_id, accomodation_id, location_id, recreation_id, price) 
 	VALUES ("Antalya Adonis", 1, 5, 3, 19, 1, 3, 5, 485.65);
 INSERT INTO hotels (hotel_name, place_id, hotel_category_id, food_id, room_type_id, accomodation_id, location_id, recreation_id, price)
