@@ -1,0 +1,1 @@
+INSERT INTO tours (tour_operator_id, hotel_id, quantity) VALUES(1, 1, 10);
