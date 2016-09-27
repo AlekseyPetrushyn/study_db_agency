@@ -64,21 +64,14 @@ description VARCHAR(280)
 --			 первая основная таблица базы данных)
 CREATE TABLE IF NOT EXISTS hotels(
 hotel_id SERIAL UNIQUE NOT NULL PRIMARY KEY,
-place_id INTEGER NOT NULL REFERENCES places(place_id) 
-	ON DELETE CASCADE ON UPDATE CASCADE,
+place_id INTEGER NOT NULL REFERENCES places(place_id),
 hotel_name VARCHAR(80) NOT NULL,
-hotel_category_id INTEGER REFERENCES hotel_category(hotel_category_id)
-	ON DELETE CASCADE ON UPDATE CASCADE,
-food_id INTEGER REFERENCES food(food_id)
-	ON DELETE CASCADE ON UPDATE CASCADE,
-room_type_id INTEGER REFERENCES rooms_type(room_type_id)
-	ON DELETE CASCADE ON UPDATE CASCADE,
-accomodation_id INTEGER REFERENCES accomodation(accomodation_id)
-	ON DELETE CASCADE ON UPDATE CASCADE,
-location_id INTEGER REFERENCES location(location_id)
-	ON DELETE CASCADE ON UPDATE CASCADE,
-recreation_id INTEGER REFERENCES recreation(recreation_id)
-	ON DELETE CASCADE ON UPDATE CASCADE,
+hotel_category_id INTEGER REFERENCES hotel_category(hotel_category_id),
+food_id INTEGER REFERENCES food(food_id),
+room_type_id INTEGER REFERENCES rooms_type(room_type_id),
+accomodation_id INTEGER REFERENCES accomodation(accomodation_id),
+location_id INTEGER REFERENCES location(location_id),
+recreation_id INTEGER REFERENCES recreation(recreation_id),
 price NUMERIC(6,2) NOT NULL
 );
 -----------------------------------------------------------------------
@@ -137,10 +130,8 @@ transfer_id INTEGER REFERENCES transfer(transfer_id)
 --16tours (вторая основная таблица базы данных)
 CREATE TABLE IF NOT EXISTS tours(
 tour_id SERIAL UNIQUE NOT NULL PRIMARY KEY,
-tour_operator_id INTEGER REFERENCES tour_operators(operator_id)
-	ON DELETE CASCADE ON UPDATE CASCADE,
-hotel_id INTEGER REFERENCES hotels(hotel_id)
-	ON DELETE CASCADE ON UPDATE CASCADE,
+tour_operator_id INTEGER REFERENCES tour_operators(operator_id),
+hotel_id INTEGER REFERENCES hotels(hotel_id),
 quantity INTEGER NOT NULL
 );
 
@@ -148,14 +139,14 @@ quantity INTEGER NOT NULL
 -- подготавливаем и заполняем третий основной раздел ЗАКАЗЫ
 --------------------------------------------------------------------
 
---discounts(скидки для постоянных клиентов)
+--17discounts(скидки для постоянных клиентов)
 CREATE TABLE IF NOT EXISTS discounts(
 discount_id SERIAL UNIQUE NOT NULL PRIMARY KEY,
 discount_name VARCHAR(80) NOT NULL,
 percent REAL NOT NULL
 );
 
---client (регистрационные данные клиента)
+--18client (регистрационные данные клиента)
 CREATE TABLE IF NOT EXISTS clients(
 client_id SERIAL UNIQUE NOT NULL PRIMARY KEY,
 second_name VARCHAR(80) NOT NULL,
@@ -165,20 +156,19 @@ birth_day DATE NOT NULL,
 adress VARCHAR(280) NOT NULL,
 mobil_number VARCHAR(280) NOT NULL,
 email VARCHAR(80) NOT NULL,
-discount_id INTEGER REFERENCES discounts(discount_id)
-	ON DELETE CASCADE ON UPDATE CASCADE,
+discount_id INTEGER REFERENCES discounts(discount_id),
 login VARCHAR(80) UNIQUE NOT NULL,
 password VARCHAR(80) NOT NULL
 );
 
---access level(уровень доступа сотрудника)
+--19access level(уровень доступа сотрудника)
 CREATE TABLE IF NOT EXISTS access_level(
 access_id SERIAL UNIQUE NOT NULL PRIMARY KEY,
 access_name VARCHAR(80) NOT NULL,
 description VARCHAR(280)
 );
 
---employees (сотрудники)
+--20employees (сотрудники)
 CREATE TABLE IF NOT EXISTS employees(
 employee_id SERIAL UNIQUE NOT NULL PRIMARY KEY,
 second_name VARCHAR(80) NOT NULL,
@@ -189,21 +179,17 @@ position VARCHAR(80) NOT NULL,
 adress VARCHAR(80) NOT NULL,
 mobil_number VARCHAR(80) NOT NULL,
 work_number VARCHAR(80),
-access_id INTEGER REFERENCES access_level(access_id)
-	ON DELETE CASCADE ON UPDATE CASCADE,
+access_id INTEGER REFERENCES access_level(access_id),
 login VARCHAR(80) UNIQUE NOT NULL,
 password VARCHAR(80) NOT NULL
 );
 
---orders(заказы)
+--21orders(заказы)
 CREATE TABLE IF NOT EXISTS orders(
 order_id SERIAL UNIQUE NOT NULL PRIMARY KEY,
-tour_id INTEGER REFERENCES tours(tour_id)
-	ON DELETE CASCADE ON UPDATE CASCADE,
-client_id INTEGER REFERENCES clients(client_id)
-	ON DELETE CASCADE ON UPDATE CASCADE,
-employee_id INTEGER REFERENCES employees(employee_id)
-	ON DELETE CASCADE ON UPDATE CASCADE,
+tour_id INTEGER REFERENCES tours(tour_id),
+client_id INTEGER REFERENCES clients(client_id),
+employee_id INTEGER REFERENCES employees(employee_id),
 registration_date TIMESTAMP NOT NULL,
 departure_date TIMESTAMP NOT NULL,
 destination_date TIMESTAMP NOT NULL
