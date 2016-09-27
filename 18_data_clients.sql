@@ -1,0 +1,2 @@
+INSERT INTO clients (second_name, first_name, patronymic, birth_day, adress, mobil_number, email, discount_id, login, password)
+	VALUES('Иванов', 'Иван', 'Иванович', 1988-10-1, 'Советская 4/115', '375291112233', 'ivanov@mail.ru', 1, 'ivanov', '1234');

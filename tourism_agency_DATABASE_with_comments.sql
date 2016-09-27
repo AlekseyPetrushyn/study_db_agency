@@ -148,14 +148,14 @@ quantity INTEGER NOT NULL
 -- подготавливаем и заполняем третий основной раздел ЗАКАЗЫ
 --------------------------------------------------------------------
 
---17discounts(скидки для постоянных клиентов)
+--discounts(скидки для постоянных клиентов)
 CREATE TABLE IF NOT EXISTS discounts(
 discount_id SERIAL UNIQUE NOT NULL PRIMARY KEY,
 discount_name VARCHAR(80) NOT NULL,
 percent REAL NOT NULL
 );
 
---18client (регистрационные данные клиента)
+--client (регистрационные данные клиента)
 CREATE TABLE IF NOT EXISTS clients(
 client_id SERIAL UNIQUE NOT NULL PRIMARY KEY,
 second_name VARCHAR(80) NOT NULL,
@@ -171,14 +171,14 @@ login VARCHAR(80) UNIQUE NOT NULL,
 password VARCHAR(80) NOT NULL
 );
 
---19access level(уровень доступа сотрудника)
+--access level(уровень доступа сотрудника)
 CREATE TABLE IF NOT EXISTS access_level(
 access_id SERIAL UNIQUE NOT NULL PRIMARY KEY,
 access_name VARCHAR(80) NOT NULL,
 description VARCHAR(280)
 );
 
---20employees (сотрудники)
+--employees (сотрудники)
 CREATE TABLE IF NOT EXISTS employees(
 employee_id SERIAL UNIQUE NOT NULL PRIMARY KEY,
 second_name VARCHAR(80) NOT NULL,
@@ -189,12 +189,13 @@ position VARCHAR(80) NOT NULL,
 adress VARCHAR(80) NOT NULL,
 mobil_number VARCHAR(80) NOT NULL,
 work_number VARCHAR(80),
-access_id INTEGER REFERENCES access_level(access_id),
+access_id INTEGER REFERENCES access_level(access_id)
+	ON DELETE CASCADE ON UPDATE CASCADE,
 login VARCHAR(80) UNIQUE NOT NULL,
 password VARCHAR(80) NOT NULL
 );
 
---20orders(заказы)
+--orders(заказы)
 CREATE TABLE IF NOT EXISTS orders(
 order_id SERIAL UNIQUE NOT NULL PRIMARY KEY,
 tour_id INTEGER REFERENCES tours(tour_id)

@@ -49,3 +49,4 @@ INSERT INTO destination_city (country_id, city_name) VALUES(24 ,"Шарль де
 INSERT INTO destination_city (country_id, city_name) VALUES(25 ,"Мадейра");
 INSERT INTO destination_city (country_id, city_name) VALUES(26 ,"Прага");
 INSERT INTO destination_city (country_id, city_name) VALUES(27 ,"Шарм-эль-Шейх");
+INSERT INTO destination_city (country_id, city_name) VALUES(27 ,"Таба");

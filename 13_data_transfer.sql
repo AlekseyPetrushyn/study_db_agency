@@ -100,3 +100,5 @@ INSERT INTO transfer (transport_id, departure_city_id, destination_city_id, tran
 INSERT INTO transfer (transport_id, departure_city_id, destination_city_id, transfer_price) VALUES(1, 4, 50, 499.12);
 INSERT INTO transfer (transport_id, departure_city_id, destination_city_id, transfer_price) VALUES(1, 1, 51, 258.25);
 INSERT INTO transfer (transport_id, departure_city_id, destination_city_id, transfer_price) VALUES(1, 4, 51, 358.25);
+INSERT INTO transfer (transport_id, departure_city_id, destination_city_id, transfer_price) VALUES(1, 1, 52, 287.15);
+INSERT INTO transfer (transport_id, departure_city_id, destination_city_id, transfer_price) VALUES(1, 4, 52, 366.85);

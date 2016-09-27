@@ -100,3 +100,5 @@ INSERT INTO tour_operators (operator_name, additional_service_id, transfer_id) V
 INSERT INTO tour_operators (operator_name, additional_service_id, transfer_id) VALUES("F Tour", , 100);
 INSERT INTO tour_operators (operator_name, additional_service_id, transfer_id) VALUES("F Tour", , 101);
 INSERT INTO tour_operators (operator_name, additional_service_id, transfer_id) VALUES("F Tour", , 102);
+INSERT INTO tour_operators (operator_name, additional_service_id, transfer_id) VALUES("F Tour", , 103);
+INSERT INTO tour_operators (operator_name, additional_service_id, transfer_id) VALUES("F Tour", , 104);
