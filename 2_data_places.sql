@@ -1,4 +1,4 @@
-INSERT INTO places (country_id, place_name) VALUES(1, 'Анталия');
+﻿INSERT INTO places (country_id, place_name) VALUES(1, 'Анталия');
 INSERT INTO places (country_id, place_name) VALUES(1, 'Алания');
 INSERT INTO places (country_id, place_name) VALUES(1, 'Белек');
 INSERT INTO places (country_id, place_name) VALUES(1, 'Кемер');

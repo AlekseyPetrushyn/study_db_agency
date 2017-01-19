@@ -1,2 +1,2 @@
-INSERT INTO employees (second_name, first_name, patronymic, birth_day, position, adress, mobil_number, access_id, login, password)
+﻿INSERT INTO employees (second_name, first_name, patronymic, birth_day, position, adress, mobil_number, access_id, login, password)
 	VALUES('Петров', 'Петр', 'Петрович', '1985-05-10', 'младший сотрудник', 'Советская 10/170', '375293334455', 3, 'petrov', '1234');

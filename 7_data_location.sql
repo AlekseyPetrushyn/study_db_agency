@@ -1,3 +1,0 @@
-INSERT INTO location (location_name, description) VALUES('первая береговая линия', 'это отели, расположенные непосредственно на берегу моря.');
-INSERT INTO location (location_name, description) VALUES('вторая береговя линия', 'это отели, между территорией и пляжем которых находится дорога или променад.');
-INSERT INTO location (location_name, description) VALUES('городской отель', 'отель расположен в городе');

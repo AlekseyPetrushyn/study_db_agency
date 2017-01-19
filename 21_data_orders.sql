@@ -1,1 +1,1 @@
-INSERT INTO orders (tour_id, client_id, employee_id, registration_date, departure_date, destination_date) VALUES();
+INSERT INTO orders (tour_id, client_id, employee_id) VALUES(42, 1, 1);
