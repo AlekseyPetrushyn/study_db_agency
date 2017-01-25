@@ -190,5 +190,6 @@ CREATE TABLE IF NOT EXISTS orders(
 order_id SERIAL UNIQUE NOT NULL PRIMARY KEY,
 tour_id INTEGER REFERENCES tours(tour_id),
 client_id INTEGER REFERENCES clients(client_id),
-employee_id INTEGER REFERENCES employees(employee_id)
+employee_id INTEGER REFERENCES employees(employee_id),
+order_price NUMERIC(6,2) NOT NULL
 );
